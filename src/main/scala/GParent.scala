@@ -8,14 +8,16 @@ class Box[+A]
 
 class Box2[-A]
 
-def foo(x : Box[Parent]) : Box[Parent] = identity(x)
+object VariablesTest extends App {
+  def foo(x: Box[Parent]): Box[Parent] = identity(x)
 
-def bar(x : Box2[Parent]) : Box2[Parent] = identity(x)
+  def bar(x: Box2[Parent]): Box2[Parent] = identity(x)
 
-foo(new Box[Child]) // success
+  foo(new Box[Child]) // success
 
-foo(new Box[GParent]) // type error
+  //foo(new Box[GParent]) // type error
 
-bar(new Box2[Child]) // type error
+  //bar(new Box2[Child]) // type error
 
-bar(new Box2[GParent]) // success
+  bar(new Box2[GParent]) // success
+}
