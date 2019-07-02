@@ -50,7 +50,7 @@ object CovarianceTest extends App {
   }
 
   def printADog(printer: Printer[Dog], dog: Dog): Unit = {
-    printer.print(Dog)
+    printer.print(dog)
   }
 
 
