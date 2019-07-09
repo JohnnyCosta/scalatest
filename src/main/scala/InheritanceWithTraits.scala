@@ -19,9 +19,5 @@ class MixinClass extends AbstractClass with Trait1 with Trait2 {
 }
 
 
-object MainTest {
-  def main(args: Array[String]): Unit = {
-    val melange = new MixinClass()
-    println(melange.message)
-  }
-}
+
+
